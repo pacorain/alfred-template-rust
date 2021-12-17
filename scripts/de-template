@@ -1,0 +1,8 @@
+#!/bin/zsh
+
+(cd $(git rev-parse --show-toplevel) &&
+git restore --staged .
+git rm -rf readme-images &&
+git rm README.md &&
+git mv README-template.md README.md &&
+git rm scripts/de-template)
